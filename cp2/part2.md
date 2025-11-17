@@ -1,6 +1,6 @@
-# Coding Project 2 - Part 2 - DRAFT
+# Coding Project 2 - Part 2
 
-Google Drive Link: See Canvas
+Google Drive Link: See Canvas for Part 1 or Part 2
 
 ## General Overview
 
@@ -8,15 +8,22 @@ In Part 1, we wrote the back end for the server, some testing tools, and did bot
 
 ## Step 0 - Fetch the Captures
 
-Make sure you have access to your respective captures from Part 1 as well as a few captures from other teams.
+Make sure you have access to your respective captures from Part 1 as well as a few captures from other teams.  The captures do not need to be part of your repository due to their size and you should appropriately use `.gitignore` as needed.
 
-## Step 1 - Boutique Tools
+## [15 pts] Step 1 - Boutique Tools
 
 For the first step of Part 2, you will be crafting several boutique or what some might refer to as bespoke tools, tools specifically geared at the captures that we gathered during the first part.  While one could argue that much of your undergraduate degree consists of these kinds of tools, your task with Step 1 is to adddress a few of the minor nits / difficulties for prepping for the analytical parts of Step 2.
 
 All code for Step 1 should go into a `tools` subdirectory off of `cp2`.
 
 You may use any tools present on the CSE student machines to help you accomplish Step 1 (system tools, Python code, shell scripts, etc.).
+
+* Step 1a: `find-client`, `find-server`
+* Step 1b: `focus-filter`
+* Step 1c: `find-tcp-max`, `pto`
+* Step 1d: `packet-smash`
+
+You will have a healthy amount of discretion on the exact arguments.  Make sure to document things appropriately in your README.
 
 ### Step 1a - Identify the Client and Server
 
@@ -58,7 +65,7 @@ Report as part of your output the original size of the various packet captures a
 * You should report at least: number of captures, cumulative size of the captures, final size of the resulting archive, percent reduction from your tool
 * You do not need to traverse sub-directories
 
-## Step 2 - Advanced Analytics
+## [20 pts] Step 2 - Advanced Analytics
 
 With the housekeeping from Part 1 in place, the next task is to write several analytical tools to help with answering the questions from Part 3.  We know the respective performance times from your client that you wrote in Part 1, now we want to dive a bit deeper into the why.
 
@@ -80,6 +87,7 @@ Write a script / code named `analyze-perf` that does the following:
    * The information grouped on a capture by capture basis (single `.pcap` file)
    * The captures grouped on the basis of host and access point
 * Compute statistics for TCP retransmissions across a given capture including minimum, maximum, mean, and median on both a capture basis node basis (host, ap)
+* Report basic information about each of the input files and the number of observed packets
 * Provide a sorted list of the number of tests for each host and access point (e.g. host X had Y tests)
 * Report a sorted list on the basis of hosts and access points for the poorest performance in a tabular format (human readable) that lists the MAC address, number of tests, and the various statistics
 
@@ -91,7 +99,7 @@ Create an output of your code under the following scenarios using the following 
 * **self-plus.txt**: A run of your tool on a total of four packet captures from Part 1
 * **self-big.txt**: A run of your tool on at least ten packet captures from Part 1
 
-## Step 3 - Do the Analytics
+## [10 pts] Step 3 - Do the Analytics
 
 For Step 3, use your tool to answer the following questions in a file named `insight.txt` in the `cp2` directory.
 
